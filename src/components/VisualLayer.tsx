@@ -105,9 +105,9 @@ function useNodesPerSecond(speed: Speed) {
   if (speed === "Slow") {
     nodesPerSecond.current = 70;
   } else if (speed === "Normal") {
-    nodesPerSecond.current = 300;
+    nodesPerSecond.current = 350;
   } else if (speed === "Fast") {
-    nodesPerSecond.current = 1100;
+    nodesPerSecond.current = 2000;
   }
   return nodesPerSecond;
 }
