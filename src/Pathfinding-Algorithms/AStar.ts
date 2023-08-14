@@ -24,7 +24,6 @@ export default function aStarSearch(startNode: MapNode, endNode: MapNode) {
 
     if (currentNode === endNode) {
       //Retrace shortest path
-      console.log(distances.get(endNode));
       const shortestPathNodes: MapNode[] = [];
       let curr: MapNode | undefined =
         visitedNodesInOrder[visitedNodesInOrder.length - 1];

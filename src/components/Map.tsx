@@ -45,6 +45,7 @@ export default function Map(props: {
   );
 }
 
+//Displays markers for the start and end nodes
 function StartAndEndNodes() {
   const { startPos, setStartPos, endPos, setEndPos } =
     useContext(StartEndNodeContext);

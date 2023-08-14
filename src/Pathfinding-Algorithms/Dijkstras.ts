@@ -24,7 +24,6 @@ export default function dijkstras(startNode: MapNode, endNode: MapNode) {
     processedNodes.add(currentNode);
 
     if (currentNode === endNode) {
-      console.log(distances.get(endNode));
       //Retrace shortest path
       const shortestPathNodes: MapNode[] = [];
       let curr: MapNode | undefined =

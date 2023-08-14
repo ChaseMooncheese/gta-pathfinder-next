@@ -2,7 +2,7 @@
 
 import Map from "./Map";
 import { Algorithm, MapNode } from "../types/PathfindingVisualizerTypes";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import PathfindingServer from "../PathfindingServer";
 import { AlgorithmProvider } from "../context/AlgorithmProvider";
 import { StartEndNodeProvider } from "../context/StartEndNodeProvider";
@@ -36,7 +36,7 @@ export default function PathfindingVisualizer() {
   };
 
   return (
-    <>
+    <Suspense fallback={<div>loading map...</div>}>
       <AlgorithmProvider>
         <SpeedProvider>
           <StartEndNodeProvider>
@@ -48,6 +48,6 @@ export default function PathfindingVisualizer() {
           </StartEndNodeProvider>
         </SpeedProvider>
       </AlgorithmProvider>
-    </>
+    </Suspense>
   );
 }
