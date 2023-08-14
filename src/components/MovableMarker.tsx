@@ -9,6 +9,8 @@ import startIcon from "../../public/cursor-purple.png";
 import endIcon from "../../public/marker-icon-2x.png";
 
 function getIcon(type: "start" | "end") {
+  console.log("start is" + startIcon.src);
+  console.log("end icon " + endIcon.src);
   const iconUrl = type === "start" ? startIcon : endIcon;
   const iconSize: [number, number] = type === "start" ? [25, 25] : [25, 41];
   const icon = L.icon({
