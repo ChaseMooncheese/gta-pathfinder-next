@@ -5,16 +5,16 @@ import * as L from "leaflet";
 import { Marker } from "react-leaflet";
 import { useMemo, useRef, useEffect } from "react";
 import startIcon from "../../public/cursor-purple.png";
-// import endIcon from "leaflet/dist/images/marker-icon-2x.png";
 import endIcon from "../../public/marker-icon-2x.png";
 
+const startIconURL = startIcon.src;
+const endIconURL = endIcon.src;
+
 function getIcon(type: "start" | "end") {
-  console.log("start is" + startIcon.src);
-  console.log("end icon " + endIcon.src);
-  const iconUrl = type === "start" ? startIcon : endIcon;
+  const iconUrl = type === "start" ? startIconURL : endIconURL;
   const iconSize: [number, number] = type === "start" ? [25, 25] : [25, 41];
   const icon = L.icon({
-    iconUrl: iconUrl.src,
+    iconUrl: iconUrl,
     iconSize: iconSize,
   });
   return icon;
