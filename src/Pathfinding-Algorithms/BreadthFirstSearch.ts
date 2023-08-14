@@ -1,4 +1,4 @@
-import { MapNode } from "../PathfindingVisualizerTypes";
+import { MapNode } from "../types/PathfindingVisualizerTypes";
 
 export default function breadthFirstSearch(
   startNode: MapNode,
