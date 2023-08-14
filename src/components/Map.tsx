@@ -3,7 +3,8 @@
 import { LatLngBounds, CRS } from "leaflet";
 import { ImageOverlay, MapContainer, MapContainerProps } from "react-leaflet";
 // import mapImgURL from "../../public/GTAMap.png";
-import mapImgURL from "../../public/GTAMap.jpg";
+// import mapImgURL from "../../public/GTAMap.jpg";
+import mapImgURL from "../../public/GTAMapSmall.jpg";
 import VisualLayer from "./VisualLayer";
 import { MapNode } from "../types/PathfindingVisualizerTypes";
 import MovableMarker from "./MovableMarker";
