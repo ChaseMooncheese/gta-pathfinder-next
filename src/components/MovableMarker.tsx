@@ -33,6 +33,7 @@ export default function MovableMarker(props: {
       p = initialPosition;
     }
     props.setPosition(p);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const eventHandlers = useMemo(
@@ -45,6 +46,7 @@ export default function MovableMarker(props: {
         }
       },
     }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );
 
