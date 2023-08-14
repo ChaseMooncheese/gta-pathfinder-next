@@ -8,7 +8,8 @@ import startIcon from "../../public/cursor-purple.png";
 import endIcon from "leaflet/dist/images/marker-icon-2x.png";
 
 function getIcon(type: "start" | "end") {
-  const iconUrl = type === "start" ? startIcon : endIcon;
+  // const iconUrl = type === "start" ? startIcon : endIcon;
+  const iconUrl = startIcon;
   const iconSize: [number, number] = type === "start" ? [25, 25] : [25, 41];
   const icon = L.icon({
     iconUrl: iconUrl.src,
@@ -53,7 +54,7 @@ export default function MovableMarker(props: {
   return (
     <Marker
       draggable={true}
-      // icon={getIcon(props.type)}
+      icon={getIcon(props.type)}
       position={initialPosition}
       ref={markerRef}
       eventHandlers={eventHandlers}
