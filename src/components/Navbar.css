@@ -1,0 +1,113 @@
+.navbar {
+  width: 98vw;
+  height: 10vh;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 1vh;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: x-large;
+  font-weight: 9000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.nav-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.visualize-button {
+  background-color: #646cff;
+  color: "white";
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 500;
+  display: flex;
+  visibility: visible;
+  background-color: darkslateblue;
+  width: 100%;
+  min-height: 500%;
+  border-radius: 8%;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+
+.dropdown-button {
+  position: relative;
+  width: 48%;
+  margin: 2%;
+  cursor: pointer;
+  word-wrap: break-word;
+  user-select: none;
+}
+
+.dropdown-button-anchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-button-selected {
+  filter: brightness(1.4);
+}
+
+.dropdown-menu > h4 {
+  color: white;
+  cursor: pointer;
+  padding: 0.3rem;
+  max-height: 200px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.nav-item {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: filter 150ms;
+}
+
+.gta-pathfinding-visualizer-title {
+  align-self: flex-start;
+  text-align: left;
+  padding-left: 2rem;
+  width: 100%;
+}
+
+.dropdown-item-button {
+  width: fit-content;
+  width: 100%;
+  padding: 0.5rem;
+  min-height: 3rem;
+  text-align: left;
+  background-color: darkslateblue;
+  font-size: large;
+  flex-grow: 1;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li:hover {
+  filter: brightness(1.6);
+}
+
+a {
+  text-decoration: none;
+}
