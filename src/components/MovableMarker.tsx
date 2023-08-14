@@ -53,7 +53,7 @@ export default function MovableMarker(props: {
   return (
     <Marker
       draggable={true}
-      icon={getIcon(props.type)}
+      // icon={getIcon(props.type)}
       position={initialPosition}
       ref={markerRef}
       eventHandlers={eventHandlers}
