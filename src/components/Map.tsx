@@ -7,7 +7,7 @@ import VisualLayer from "./VisualLayer";
 import { MapNode } from "../types/PathfindingVisualizerTypes";
 import MovableMarker from "./MovableMarker";
 import { StartEndNodeContext } from "../context/StartEndNodeProvider";
-import { useContext } from "react";
+import { Suspense, useContext } from "react";
 
 export default function Map(props: {
   visitedNodes: MapNode[];
@@ -29,7 +29,7 @@ export default function Map(props: {
   };
 
   return (
-    <>
+    <Suspense fallback={<p>loading map...</p>}>
       <MapContainer {...mapProperties}>
         <ImageOverlay url={mapImgURL.src} bounds={bounds} />
         <VisualLayer
@@ -39,7 +39,7 @@ export default function Map(props: {
 
         <StartAndEndNodes />
       </MapContainer>
-    </>
+    </Suspense>
   );
 }
 

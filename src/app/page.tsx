@@ -1,7 +1,17 @@
-import Image from "next/image";
 import "leaflet/dist/leaflet.css";
-import styles from "./page.module.css";
-import PathfindingVisualizer from "@/components/PathfindingVisualizer";
+// import PathfindingVisualizer from "@/components/PathfindingVisualizer";
+import { Suspense, useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+
+export const PathfindingVisualizer = dynamic(
+  () => import("../components/PathfindingVisualizer"),
+  {
+    ssr: false,
+    loading: () => {
+      return <div>loading map...</div>;
+    },
+  }
+);
 
 export default function Home() {
   return (
