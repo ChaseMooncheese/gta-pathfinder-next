@@ -43,6 +43,7 @@ export default function VisualLayer(props: {
       clearInterval(interval);
       setProgress(0);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.visitedNodes]);
 
   const doneAnimating = progress >= props.visitedNodes.length;
@@ -56,6 +57,7 @@ export default function VisualLayer(props: {
 
 //Layer of circular node markers. Only shown when map is zoomed in
 function NodeLayer(props: { visitedNodes: MapNode[]; progress: number }) {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const display = useMemo<Array<JSX.Element>>(() => [], [props.visitedNodes]); //reset display when algorithm is first run
 
   useEffect(() => {
@@ -72,6 +74,7 @@ function NodeLayer(props: { visitedNodes: MapNode[]; progress: number }) {
       display.push(c);
       // c.addTo(map);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.progress]);
 
   return <>{display}</>;
