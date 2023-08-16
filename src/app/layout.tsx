@@ -6,11 +6,16 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const title = "GTA V Pathfinding Visualizer";
+const description = "Visualizes shortest path algorithms on the GTA V Map";
+
 export const metadata: Metadata = {
-  title: "GTA V Pathfinding Visualizer",
-  description: "Visualizes shortest path algorithms on the GTA V Map",
+  title: title,
+  description: description,
   openGraph: {
     images: thumbnail.src,
+    title: title,
+    description: description,
   },
 };
 
